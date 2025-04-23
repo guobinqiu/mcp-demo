@@ -2,7 +2,7 @@
 
 LLM 使用的 DeepSeek-V3
 
-安装
+### 安装
 
 ```
 uv init mcp-demo
@@ -14,13 +14,15 @@ uv add mcp openai python-dotenv
 rm main.py
 ```
 
-运行
+### 运行
+
+运行前把`.env`文件里的`OPENAI_API_KEY`换成你的`deepseek api key`
 
 ```
 python3 client.py weather.py
 ```
 
-输出
+### 输出
 
 ```
 [04/23/25 21:11:54] INFO     Processing request of type ListToolsRequest                                                                                 server.py:534
