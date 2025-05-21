@@ -9,7 +9,6 @@ mcp = FastMCP("weather")
 NWS_API_BASE = "https://api.weather.gov"
 USER_AGENT = "weather-app/1.0"
 
-
 async def make_nws_request(url: str) -> dict[str, Any] | None:
     """Make a request to the NWS API with proper error handling."""
     headers = {
@@ -93,4 +92,3 @@ Forecast: {period['detailedForecast']}
 if __name__ == "__main__":
     # Initialize and run the server
     mcp.run(transport='stdio')
-

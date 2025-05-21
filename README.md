@@ -1,12 +1,12 @@
-# MCP Demo
+# MCP Python Demo
 
 LLM 使用的 DeepSeek-V3
 
-### 安装
+### 构建
 
 ```
-uv init mcp-demo
-cd mcp-demo
+uv init mcp-demo-python
+cd mcp-demo-python
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]" httpx
@@ -19,7 +19,7 @@ rm main.py
 运行前把`.env`文件里的`OPENAI_API_KEY`换成你的`deepseek api key`
 
 ```
-python3 client.py weather.py
+python3 client/main.py server/main.py
 ```
 
 ### 输出
