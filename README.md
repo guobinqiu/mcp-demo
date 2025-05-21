@@ -11,16 +11,18 @@ chat_response = client.chat.completions.create(
 )
 ```
 
-### 构建
+### 安装
 
 ```
+pip install uv
 # uv init mcp-demo-python
+git clone git@github.com:guobinqiu/mcp-demo-python.git
 cd mcp-demo-python
 uv venv
 source .venv/bin/activate
-uv add "mcp[cli]" httpx
-uv add mcp openai python-dotenv
-rm main.py
+# uv add "mcp[cli]" httpx
+# uv add mcp openai python-dotenv
+# rm main.py
 ```
 
 ### 运行
