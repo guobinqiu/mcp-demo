@@ -25,7 +25,7 @@ rm main.py
 
 ### 运行
 
-运行前把`.env`文件里的`OPENAI_API_KEY`换成你的`deepseek api key`
+运行前把`.env`文件里的`OPENAI_API_KEY`换成你自己的
 
 ```
 python3 client/main.py server/main.py

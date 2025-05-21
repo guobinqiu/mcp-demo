@@ -58,14 +58,14 @@ class MCPClient:
         # 初始化 DeepSeek Client
         client = openai.OpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
-            base_url=os.getenv("OPENAI_API_BASE", "https://api.deepseek.com/v1")
+            base_url=os.getenv("OPENAI_API_BASE")
         )
 
         final_text = []
 
         # 首轮交互
         chat_response = client.chat.completions.create(
-            model="deepseek-chat", # 通过指定 model='deepseek-chat' 即可调用 DeepSeek-V3 V3有tools属性
+            model=os.getenv("OPENAI_API_MODEL"),
             messages=messages,
             tools=available_tools,
             tool_choice="auto"
