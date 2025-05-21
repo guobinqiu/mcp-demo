@@ -5,7 +5,7 @@ LLM 使用的 DeepSeek-V3
 ### 构建
 
 ```
-uv init mcp-demo-python
+# uv init mcp-demo-python
 cd mcp-demo-python
 uv venv
 source .venv/bin/activate
