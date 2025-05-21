@@ -1,6 +1,15 @@
 # MCP Python Demo
 
-LLM 使用的 DeepSeek-V3
+> LLM 使用的 `deepseek-chat` 因为只有v3有`tools`属性 (`deepseek-reasoner`是不行的)
+
+```python
+chat_response = client.chat.completions.create(
+    model="deepseek-chat", # 通过指定 model='deepseek-chat' 即可调用 DeepSeek-V3 V3有tools属性
+    messages=messages,
+    tools=available_tools,
+    tool_choice="auto"
+)
+```
 
 ### 构建
 
