@@ -31,7 +31,7 @@ source .venv/bin/activate
 
 ```
 source .venv/bin/activate
-python3 client/main.py server/main.py
+python client/main.py server/main.py
 ```
 
 ## 输出
