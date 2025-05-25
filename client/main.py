@@ -42,7 +42,7 @@ class MCPClient:
         print("\nConnected to server with tools:", [tool.name for tool in tools])
 
     async def process_query(self, query: str) -> str:
-        messages = [{"role": "user", "content": query}]
+        messages = [{"role": "user", "content": query}] # 每轮调用 process_query(query) 都是从空白上下文开始，不会保留历史记忆
 
         # 获取可用工具
         response = await self.session.list_tools()
@@ -119,9 +119,6 @@ class MCPClient:
                 for next_choice in next_response.choices:
                     if next_choice.message.content is not None:
                         final_text.append(next_choice.message.content)
-        # Debug 输出（可选）
-        for i, item in enumerate(final_text):
-          print(f"[DEBUG] final_text[{i}] type: {type(item)}, value: {item}")
 
         return "\n".join(final_text)
 

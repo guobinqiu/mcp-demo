@@ -11,7 +11,7 @@ chat_response = client.chat.completions.create(
 )
 ```
 
-### 安装
+## 安装
 
 ```
 pip install uv
@@ -25,7 +25,7 @@ source .venv/bin/activate
 # rm main.py
 ```
 
-### 运行
+## 运行
 
 运行前把`.env`文件里的`OPENAI_API_KEY`换成你自己的
 
@@ -33,7 +33,7 @@ source .venv/bin/activate
 python3 client/main.py server/main.py
 ```
 
-### 输出
+## 输出
 
 ```
 [04/23/25 21:11:54] INFO     Processing request of type ListToolsRequest                                                                                 server.py:534
@@ -109,4 +109,8 @@ Let me know if you'd like more details!
 Query: 
 
 ```
+
+## Golang版
+
+> https://github.com/guobinqiu/mcp-demo-golang
 
