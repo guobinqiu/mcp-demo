@@ -121,21 +121,21 @@ class MCPClient:
 
     return "\n".join(final_text)
 
-    async def chat_loop(self):
-        print("\nMCP Client Started!")
-        print("Type your queries or 'quit' to exit.")
-        while True:
-            try:
-                query = input("\nQuery: ").strip()
-                if query.lower() == 'quit':
-                    break
-                response = await self.process_query(query)
-                print("\n" + response)
-            except Exception as e:
-                print(f"\nError: {str(e)}")
+  async def chat_loop(self):
+      print("\nMCP Client Started!")
+      print("Type your queries or 'quit' to exit.")
+      while True:
+          try:
+              query = input("\nQuery: ").strip()
+              if query.lower() == 'quit':
+                  break
+              response = await self.process_query(query)
+              print("\n" + response)
+          except Exception as e:
+              print(f"\nError: {str(e)}")
 
-    async def cleanup(self):
-        await self.exit_stack.aclose()
+  async def cleanup(self):
+      await self.exit_stack.aclose()
 
 
 async def main():
